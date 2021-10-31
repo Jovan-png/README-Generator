@@ -1,5 +1,6 @@
 const inquirer = require('inquirer')
-const fs = require('fs')
+const fs = require('fs');
+const Choices = require('inquirer/lib/objects/choices');
 const questions = [
     {
         type: 'input',
@@ -12,10 +13,9 @@ const questions = [
         message: 'Please enter a description for your project!'
     },
     {
-        type: 'checkbox',
+        type: 'confirm',
         name: 'Contents',
-        message: 'What would you like the Table of Contents to include?',
-        choices: ['Installation','Usage','Credits','License']
+        message: 'Would you like to include a table of contents',
     },
     {
         type: 'input',
@@ -33,24 +33,25 @@ const questions = [
         message: 'Please list all collaborators on your Project!'
     },
     {
-        type: 'input',
+        type: 'choices',
         name: 'License',
-        message: 'Please enter the license for your project. Example: "MIT, apache,unilicense "'
+        message: 'Please enter the license for your project. Example: "MIT, apache,unilicense "',
+        choices: ['MIT','Apache','GPL']
     },
     {
         type: 'input',
-        name: 'Badges',
-        message: 'Please enter a description for your project!'
+        name: 'Tests',
+        message: 'Skip This'
     },
     {
         type: 'input',
-        name: 'Features',
-        message: 'What Is The Name Of Your Project?'
+        name: 'Questions',
+        message: 'Please enter you github username'
     },
     {
         type: 'input',
-        name: 'description',
-        message: 'Please enter a description for your project!'
+        name: 'Questionstwo',
+        message: 'Please enter your email adress'
     },
     {
         type: 'input',
@@ -61,29 +62,98 @@ const questions = [
 inquirer.prompt(questions)
 .then((data)=>{
     console.log(data)
+    // If StateMent For License
+    if(data.License === 'MIT'){
+badge =  `![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)`
+        data.License = 
+        `
+        MIT License
+
+Copyright (c) 2021
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+        `
+    }else if (data.License === 'Apache'){
+        data.License = 
+        `
+        
+        sdfsdfsd
+        `
+
+    }else{
+        data.License = `gsdfsdf`
+
+    }
+    
+    
+    
+    // If Statement For Table Of Contents
+    if(data.Contents = true){
+        data.Contents = ` 
+## Tables Of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
+
+        `
+
+    }else{
+        data.Contents = `  `
+    }
     fs.writeFile("README.md", `
-    #${data.Title}
+# ${data.Title}
 
+${badge}
 
-
-    ##Description
+## Description
     ${data.description}
 
 
 
 
-    ##Table Of Contents
-    ${data.Contents[0]}
-    ${data.Contents[1]}
-    ${data.Contents[2]}
-    ${data.Contents[3]}
+${data.Contents}
+
+
     
     
-    ##License
 
 
 
-    Licensed under the[${data.License}](https://choosealicense.com/licenses/${data.License}/?style=plastic&logo=appveyor) license
+
+## Contributing
+
+## Tests
+
+## Questions
+https://github.com/${data.Questions}
+
+If you have any additional questions please reach me at
+${data.Questionstwo}
+
+
+## License
+
+${data.License}
 
 
     `, function(err) {
