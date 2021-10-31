@@ -1,46 +1,32 @@
-
 # dfs;mfklsmf
 
-![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)
+![license](https://img.shields.io/badge/coverage-MIT25-yellowgreen)
 
 ## Description
+
     fnlsdnflksdnflks
 
-
-
-
- 
 ## Tables Of Contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [Contributing](#Contributing)
-* [Tests](#Tests)
-* [Questions](#Questions)
-
-        
-
-
-    
-    
-
-
-
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [Questions](#Questions)
 
 ## Contributing
 
 ## Tests
 
 ## Questions
+
 https://github.com/jovan-png
 
 If you have any additional questions please reach me at
 norringtonjovan@gmail.com
 
-
 ## License
-
 
         MIT License
 
@@ -63,7 +49,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-        
-
-
-    
