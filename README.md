@@ -62,5 +62,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
         
 ## Video
+A Walkthrough Video:
+
 https://youtu.be/zoRsd2Ond_8
     
