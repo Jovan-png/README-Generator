@@ -1,43 +1,43 @@
+
 # README Generator
 
 ![License](https://img.shields.io/badge/MIT-blue)
 
 ## Description
-
     This README Generator uses inquirer js to prompt users to collect information to create a unique README file.
 
+ 
 ## Tables Of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [Contributing](#Contributing)
-- [Tests](#Tests)
-- [Questions](#Questions)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
+
+        
 
 ## Contributing
 
 Made By Jovan
-
 ## Installation
-
-1. Clone Repository. 2. Install Node js. 3. Run command "npm install" in terminal.
-   ##Usage
-1. Start application with "node index.js" 2. answer each prompt.
+1. Clone Repository. 2. Install node js. 3. Run command "npm install" in terminal.
+## Usage
+1. Start application with "node index.js". 2. Answer each prompt.
 
 ## Tests
-
 N/A
-
 ## Questions
-
 Here's a link to my Github Profile.
 https://github.com/jovan-png
 
 If you have any additional questions please reach me at
 norringtonjovan@gmail.com
 
+
 ## License
+
 
         MIT License
 
@@ -60,3 +60,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+        
+
+
+    

@@ -139,7 +139,7 @@ ${data.Contents}
 Made By ${data.Credits}
 ## Installation
 ${data.Installation}
-##Usage
+## Usage
 ${data.Usage}
 
 ## Tests
