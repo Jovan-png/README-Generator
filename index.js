@@ -60,7 +60,7 @@ inquirer.prompt(questions)
     console.log(data)
     // If StateMent For License
     if(data.License === 'MIT'){
-badge =  `![License](https://img.shields.io/badge/coverage-MIT-blue)`
+badge =  `![License](https://img.shields.io/badge/license-MIT-blue)`
         data.License = 
         `
         MIT License
@@ -86,7 +86,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
         `
     }else{
-        badge = `![License](https://img.shields.io/badge/coverage-ISC-yellowgreen)`
+        badge = `![License](https://img.shields.io/badge/license-ISC-yellowgreen)`
         data.License = `ISC License
 
         Copyright (c) 2021
