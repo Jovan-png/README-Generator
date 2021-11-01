@@ -9,7 +9,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'description',
+        name: 'Description',
         message: 'Please enter a description for your project!'
     },
     {
@@ -33,30 +33,25 @@ const questions = [
         message: 'Please list all collaborators on your Project!'
     },
     {
-        type: 'choices',
+        type: 'list',
         name: 'License',
-        message: 'Please enter the license for your project. Example: "MIT, apache,unilicense "',
-        choices: ['MIT','Apache','GPL']
+        message: 'Please select the license for your project.',
+        choices: ['MIT','ISC']
     },
     {
         type: 'input',
         name: 'Tests',
-        message: 'Skip This'
+        message: 'Please provide any test for your application if applicable.'
     },
     {
         type: 'input',
         name: 'Questions',
-        message: 'Please enter you github username'
+        message: 'Please enter you Github Username'
     },
     {
         type: 'input',
         name: 'Questionstwo',
-        message: 'Please enter your email adress'
-    },
-    {
-        type: 'input',
-        name: 'Title',
-        message: 'What Is The Name Of Your Project?'
+        message: 'Please enter your Email Adress'
     },
 ];
 inquirer.prompt(questions)
@@ -64,7 +59,7 @@ inquirer.prompt(questions)
     console.log(data)
     // If StateMent For License
     if(data.License === 'MIT'){
-badge =  `![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)`
+badge =  `![License](https://img.shields.io/badge/coverage-MIT-blue)`
         data.License = 
         `
         MIT License
@@ -89,15 +84,23 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
         `
-    }else if (data.License === 'Apache'){
-        data.License = 
-        `
-        
-        sdfsdfsd
-        `
-
     }else{
-        data.License = `gsdfsdf`
+        badge = `![License](https://img.shields.io/badge/coverage-ISC-yellowgreen)`
+        data.License = `ISC License
+
+        Copyright (c) 2021
+        
+        Permission to use, copy, modify, and/or distribute this software for any
+        purpose with or without fee is hereby granted, provided that the above
+        copyright notice and this permission notice appear in all copies.
+        
+        THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+        REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+        AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+        INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+        LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+        OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+        PERFORMANCE OF THIS SOFTWARE.`
 
     }
     
@@ -126,25 +129,18 @@ SOFTWARE.
 ${badge}
 
 ## Description
-    ${data.description}
-
-
-
+    ${data.Description}
 
 ${data.Contents}
 
-
-    
-    
-
-
-
-
 ## Contributing
+
+Made By ${data.Credits}
 
 ## Tests
 
 ## Questions
+Here's a link to my Github Profile.
 https://github.com/${data.Questions}
 
 If you have any additional questions please reach me at
