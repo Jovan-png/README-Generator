@@ -20,7 +20,7 @@ const questions = [
     {
         type: 'input',
         name: 'Installation',
-        message: 'Please enter a installation instructions for you README'
+        message: 'Please enter a installation instructions for you application.'
     },
     {
         type: 'input',
@@ -41,7 +41,8 @@ const questions = [
     {
         type: 'input',
         name: 'Tests',
-        message: 'Please provide any test for your application if applicable.'
+        message: 'Please provide any test for your application if applicable.',
+        default: 'N/A'
     },
     {
         type: 'input',
@@ -136,9 +137,13 @@ ${data.Contents}
 ## Contributing
 
 Made By ${data.Credits}
+## Installation
+${data.Installation}
+##Usage
+${data.Usage}
 
 ## Tests
-
+${data.Tests}
 ## Questions
 Here's a link to my Github Profile.
 https://github.com/${data.Questions}
